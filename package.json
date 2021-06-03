@@ -1,0 +1,28 @@
+{
+  "name": "code-sharing-website",
+  "version": "0.0.1",
+  "description": "A simple code sharing website.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "discord.js": "^12.5.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.13",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "nodemon": "^2.0.7"
+  }
+}

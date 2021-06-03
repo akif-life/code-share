@@ -1,0 +1,56 @@
+<html>
+  <body>
+    <%- include('partials/_header'); -%>
+    <%- include('partials/_loader'); -%>
+    <div class="container" style="min-height: 78vh; text-align: center;">
+      <div class="row row-cols-1 row-cols-md-2" style="margin-top: 100px;">
+      <h4>
+        24 saat içinde paylaşılan kod sayısı:<br><%= code.filter(x => (Date.now() - x.date) <= 1000 * 60 * 60 * 24).length %>
+      </h4>
+      <h4>
+        7 gün içinde paylaşılan kod sayısı:<br><%= code.filter(x => (Date.now() - x.date) <= 1000 * 60 * 60 * 24 * 7).length %>
+      </h4>
+      </div>
+      <table class="table table-hover table-dark" style="margin-top: 40px; border-radius: 50px;">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Açıklama</th>
+            <th scope="col">Kod Rank</th>
+            <th scope="col">Kod ID</th>
+            <th scope="col">İşlem</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% code.forEach((x, i) => { %>
+          <tr>
+            <th scope="row"><%= i+1 %></th>
+            <td><%= x.name %></td>
+            <td>
+              <% if(x.desc.length >= 15) { %>
+              <%= x.desc.split('').join('').slice(0,15)%> ...
+              <% } else { %>
+              <%= x.desc %>
+              <% } %>
+              </td>
+              
+            <td><%= x.rank %></td>
+            <td><%= x.id %></td>
+            <td><a href="/delete/<%= x.rank %>/<%= x.id %>" class="btn btn-outline-danger">Sil</a>&nbsp;<a href="/<%= x.rank %>/<%= x.id %>" class="btn btn-outline-info">Görüntüle</a>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      if (localStorage.getItem("mode") != "") {
+        document.body.classList.add(localStorage.getItem("mode"));
+        document.getElementById("mode-btn").checked = true;
+      }
+    </script>
+    <script src="/index.js"></script>
+    <%- include('partials/_footer'); -%>
+  </body>
+</html>

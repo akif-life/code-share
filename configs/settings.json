@@ -1,0 +1,7 @@
+{
+  "mongoURL": "mongodb+srv://rabelcode:rabelcode@cluster0.brq1v.mongodb.net/rabelcodedb?retryWrites=true&w=majority",
+  "clientID": "745273648805445673",
+  "token": "NzQ1MjczNjQ4ODA1NDQ1Njcz.XzvYLA.6jStdJM8rWkjEYICjxEfmpVPEWE",
+  "secret": "LRSP3nSAHRn5QuG_nEGj3b2QJEi842m1",
+  "callbackURL": "http://localhost/callback"
+}

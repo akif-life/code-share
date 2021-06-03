@@ -1,0 +1,17 @@
+{
+  "domain": "localhost",
+  "guildID": "828232206442692608",
+  "guildInvite": "https://discord.gg/VD6Cvr4BV9",
+  "codeLog": "844277491567689790",
+  "bugLog": "844277511599816715",
+  "ownerRole": "844277777946771466",
+  "adminRole": "844277785454182450",
+  "codeSharer": "844277796250452000",
+  "booster": "844277792027705435",
+  "notCodeSharer": ["844277770490216468"],
+  "readySystemsRole": "844277801381396480",
+  "diaRole": "844277804497108994",
+  "goldRole": "844277807806283827",
+  "normalRole": "844277810789089351",
+  "abone": "844550620392456203"
+}
